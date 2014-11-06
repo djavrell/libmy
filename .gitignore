@@ -1,0 +1,6 @@
+*.o
+*.i
+*.s
+*.txt
+doc/
+.idea/
