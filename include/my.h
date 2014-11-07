@@ -26,13 +26,10 @@ typedef struct	s_ext
 }		t_ext;
 
 /* ===== { prototipe } ===== */
+/* home */
+char		*get_next_line(const int fd);
+
 /* utils */
-char 		*ret_us_nbr_base(void *var, char *base);
-char 		*ret_lg_nbr_base(void *var, char *base);
-char		*ret_nbr_base(void *var, char *base);
-char 		*ret_char(void *var, char *base);
-int	    	check_len(char *s, int b, int e);
-char 		*ret_str(void *var, char *base);
 int		my_strlen(char *str);
 char		*my_strdup(char *src);
 char		*my_revstr(char *str);
@@ -56,8 +53,19 @@ char		*parse_str(char *str, va_list ap);
 char		*call_func(char **ag, va_list ap);
 int		len_arg(char *str, int *end);
 
+/* concat/other */
+char 		*ret_us_nbr_base(void *var, char *base);
+char 		*ret_lg_nbr_base(void *var, char *base);
+char		*ret_nbr_base(void *var, char *base);
+char 		*ret_char(void *var, char *base);
+int	    	check_len(char *s, int b, int e);
+char 		*ret_str(void *var, char *base);
+
 /* copy */
+char		*my_strlcpy(char *dest, char *src, int beg, int size);
 char		*my_strncpy(char *dest, char *src, int n);
+char		*my_strcpyn(char *dest, char *src, int n);
+char		*my_ev_strcpy(char *dest, char *src);
 char		*my_strcpy(char *dest, char *src);
 
 /* cmp */

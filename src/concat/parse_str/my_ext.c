@@ -1,4 +1,4 @@
-#include 	"../../include/my.h"
+#include 	"my.h"
 
 t_ext		*tab_ext(void)
 {

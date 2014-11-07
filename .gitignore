@@ -4,3 +4,5 @@
 *.txt
 doc/
 .idea/
+test
+pre_proc/
