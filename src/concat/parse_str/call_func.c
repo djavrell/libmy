@@ -14,8 +14,9 @@ char		*call_func(char **ag, va_list ap)
   while (my_strncmp(param, tab[i].opt, tab[i].len) != 0 && tab[i].opt != NULL)
     i++;
   if ((tab[i].opt) != NULL)
-    ret = tab[i].func(va_arg(ap, void*), tab[i].base);
-  /* printf("call_func: param = %s; tab[%d].opt = %s, len = %d, cmp = %d, ret = %s\n", */
-  /* 	 param, i, tab[i].opt, tab[i].len, my_strncmp(param, tab[i].opt, tab[i].len), ret); */
+    ret = tab[i].func(va_arg(ap, void*), tab[i].base, param);
   return (ret);
 }
+
+  /* printf("call_func: param = %s; tab[%d].opt = %s, len = %d, cmp = %d, ret = %s\n", */
+  /* 	 param, i, tab[i].opt, tab[i].len, my_strncmp(param, tab[i].opt, tab[i].len), ret); */

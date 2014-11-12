@@ -1,14 +1,14 @@
 /*
 ** my_ev_strcat.c for my_ev_strcat.c in /home/proute_k/rendu/genealfs/lib/sources
-** 
+**
 ** Made by kévin prouteau
 ** Login   <proute_k@epitech.net>
-** 
+**
 ** Started on  Wed Jun 18 16:38:01 2014 kévin prouteau
-** Last update Wed Jun 18 17:06:35 2014 kévin prouteau
+** Last update Wed Nov 12 10:48:10 2014 kevin
 */
 
-#include	"../include/my.h"
+#include	"my.h"
 
 char		*my_ev_strcat(char *d, char *src)
 {

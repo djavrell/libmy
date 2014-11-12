@@ -22,14 +22,21 @@ typedef struct	s_ext
   char		*opt;
   int		len;
   char		*base;
-  char *(*func)(void *parm, char *base);
+  char *(*func)(void *parm, char *base, char *param);
 }		t_ext;
+
+typedef struct	s_list
+{
+  char		let;
+  struct s_list	*next;
+}		t_list;
 
 /* ===== { prototipe } ===== */
 /* home */
 char		*get_next_line(const int fd);
 
 /* utils */
+char            **my_str_to_wordtab(char *str, char op);
 int		my_strlen(char *str);
 char		*my_strdup(char *src);
 char		*my_revstr(char *str);
@@ -54,12 +61,22 @@ char		*call_func(char **ag, va_list ap);
 int		len_arg(char *str, int *end);
 
 /* concat/other */
-char 		*ret_us_nbr_base(void *var, char *base);
-char 		*ret_lg_nbr_base(void *var, char *base);
-char		*ret_nbr_base(void *var, char *base);
-char 		*ret_char(void *var, char *base);
+char 		*ret_us_nbr_base(void *var, char *base, char *ag);
+char 		*ret_lg_nbr_base(void *var, char *base, char *ag);
+char		*ret_nbr_base(void *var, char *base, char *ag);
+char 		*ret_char(void *var, char *base, char *ag);
+char 		*ret_str(void *var, char *base, char *ag);
 int	    	check_len(char *s, int b, int e);
-char 		*ret_str(void *var, char *base);
+
+/* concat/other/base */
+char		*check_ag_base(char *ag, char **arg);
+int             let_in_list(char let, t_list *list);
+void		*in_crochet(char *ag, char **arg);
+t_list          *add(t_list *list, t_list *new);
+char            *validation_base(char **arg);
+void		free_list(t_list *list);
+void            aff_list(t_list *list);
+t_list          *init_elem(void);
 
 /* copy */
 char		*my_strlcpy(char *dest, char *src, int beg, int size);

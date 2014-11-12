@@ -3,6 +3,6 @@
 *.s
 *.txt
 doc/
-.idea/
+idea/
 test
 pre_proc/
