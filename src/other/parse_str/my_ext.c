@@ -1,3 +1,13 @@
+/*
+** my_ext.c for libmy in /home/kevin/Documents/prog/C/libmy
+**
+** Made by kevin
+** Login   <kevin@epitech.net>
+**
+** Started on  Wed Nov 12 11:29:23 2014 kevin
+** Last update Wed Nov 12 11:29:24 2014 kevin
+*/
+
 #include 	"my.h"
 
 t_ext		*tab_ext(void)

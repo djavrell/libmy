@@ -1,3 +1,13 @@
+/*
+** ret_nbr_base.c for libmy in /home/kevin/Documents/prog/C/libmy
+**
+** Made by kevin
+** Login   <kevin@epitech.net>
+**
+** Started on  Wed Nov 12 11:27:09 2014 kevin
+** Last update Wed Nov 12 12:10:02 2014 kevin
+*/
+
 #include	"my.h"
 
 char		*ret_nbr_base(void *var, char *base, char *ag)
@@ -25,6 +35,6 @@ char		*ret_nbr_base(void *var, char *base, char *ag)
       nb /= my_strlen(basef);
     }
   free(b);
-  free(basef);
+  /* free(basef); */
   return (my_revstr(my_ev_strcat(ret, end)));
 }

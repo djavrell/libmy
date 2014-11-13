@@ -1,4 +1,14 @@
-#include	"../include/my.h"
+/*
+** my_revstr.c for libmy in /home/kevin/Documents/prog/C/libmy
+**
+** Made by kevin
+** Login   <kevin@epitech.net>
+**
+** Started on  Wed Nov 12 11:30:30 2014 kevin
+** Last update Wed Nov 12 11:30:34 2014 kevin
+*/
+
+#include	"my.h"
 
 char		*my_revstr(char *str)
 {

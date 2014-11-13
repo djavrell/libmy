@@ -5,7 +5,7 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Wed Jun 18 16:31:06 2014 kévin prouteau
-** Last update Fri Nov  7 15:28:10 2014 kevin
+** Last update Wed Nov 12 11:38:48 2014 kevin
 */
 
 #include	<stdlib.h>
@@ -27,7 +27,6 @@ char		*get_next_line(const int fd)
   char		buff[2];
   char		*ret;
 
-  fd = ((fd == NULL) ? 0: fd);
   if ((ret = malloc(1 * sizeof(*ret))) == NULL)
     return (NULL);
   ret[0] = '\0';

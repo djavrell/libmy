@@ -1,3 +1,13 @@
+/*
+** call_func.c for libmy in /home/kevin/Documents/prog/C/libmy
+**
+** Made by kevin
+** Login   <kevin@epitech.net>
+**
+** Started on  Wed Nov 12 11:29:06 2014 kevin
+** Last update Wed Nov 12 11:29:14 2014 kevin
+*/
+
 #include	"my.h"
 
 char		*call_func(char **ag, va_list ap)
@@ -17,6 +27,3 @@ char		*call_func(char **ag, va_list ap)
     ret = tab[i].func(va_arg(ap, void*), tab[i].base, param);
   return (ret);
 }
-
-  /* printf("call_func: param = %s; tab[%d].opt = %s, len = %d, cmp = %d, ret = %s\n", */
-  /* 	 param, i, tab[i].opt, tab[i].len, my_strncmp(param, tab[i].opt, tab[i].len), ret); */

@@ -1,3 +1,13 @@
+##
+## Makefile for libmy in /home/kevin/Documents/prog/C/libmy
+##
+## Made by kevin
+## Login   <kevin@epitech.net>
+##
+## Started on  Wed Nov 12 15:45:08 2014 kevin
+## Last update Wed Nov 12 15:45:15 2014 kevin
+##
+
 NAME_T		=	test
 NAME_L		=	libmy.a
 
@@ -6,43 +16,50 @@ LIB		=	ar rc
 
 RM		=	rm -f
 
+CMP		=	src/cmp/my_strcmp.c				\
+			src/cmp/my_strncmp.c				\
+
 COPY		=	src/copy/my_strcpy.c				\
 			src/copy/my_strncpy.c				\
 			src/copy/my_strcpyn.c				\
 			src/copy/my_ev_strcpy.c				\
 			src/copy/my_strlcpy.c				\
 
-CAT		=	src/concat/my_ev_strcat.c			\
+CONCAT		=	src/concat/my_ev_strcat.c			\
 			src/concat/my_strncat.c				\
 			src/concat/my_ev_strncat.c			\
 			src/concat/my_ev_strlcat.c			\
 			src/concat/my_fcat.c				\
 
-PARSE_STR	=	src/concat/parse_str/my_ext.c			\
-			src/concat/parse_str/parse_arg.c		\
-			src/concat/parse_str/parse_str.c		\
-			src/concat/parse_str/rec_arg.c			\
-			src/concat/parse_str/call_func.c		\
-			src/concat/parse_str/len_arg.c			\
+CHECK_BASE	=	src/other/check_base/check_ag_base.c		\
+			src/other/check_base/in_crochet.c	 	\
+			src/other/check_base/add.c		 	\
+			src/other/check_base/init_elem.c	 	\
+			src/other/check_base/let_in_list.c	 	\
+			src/other/check_base/validation_base.c 		\
+			src/other/check_base/aff_list.c	 		\
+			src/other/check_base/free_list.c	 	\
 
-BASE		=	src/concat/other/base/check_ag_base.c		\
-			src/concat/other/base/in_crochet.c	 	\
-			src/concat/other/base/add.c		 	\
-			src/concat/other/base/init_elem.c	 	\
-			src/concat/other/base/let_in_list.c	 	\
-			src/concat/other/base/validation_base.c	 	\
-			src/concat/other/base/aff_list.c	 	\
-			src/concat/other/base/free_list.c	 	\
+PARSE_STR	=	src/other/parse_str/my_ext.c			\
+			src/other/parse_str/parse_arg.c			\
+			src/other/parse_str/parse_str.c			\
+			src/other/parse_str/rec_arg.c			\
+			src/other/parse_str/call_func.c			\
+			src/other/parse_str/len_arg.c			\
 
-STR		=	src/concat/other/str/set_born.c			\
+RET		=	src/other/ret/ret_str.c				\
+			src/other/ret/ret_char.c			\
+			src/other/ret/ret_us_nbr_base.c			\
+			src/other/ret/ret_lg_nbr_base.c			\
+			src/other/ret/ret_nbr_base.c			\
+			src/other/ret/check_len.c			\
 
-POTHER		=	src/concat/other/ret_str.c			\
-			src/concat/other/ret_char.c			\
-			src/concat/other/ret_us_nbr_base.c		\
-			src/concat/other/ret_lg_nbr_base.c		\
-			src/concat/other/ret_nbr_base.c			\
-			src/concat/other/check_len.c			\
-			$(BASE)						\
+STR		=	src/other/str/set_born.c			\
+
+OTHER		=	$(CHECK_BASE)					\
+			$(PARSE_STR)					\
+			$(RET)						\
+			$(STR)						\
 
 PRINT		=	src/print/my_printf.c				\
 			src/print/my_fprintf.c				\
@@ -50,20 +67,20 @@ PRINT		=	src/print/my_printf.c				\
 UTILS		=	src/utils/my_strlen.c				\
 			src/utils/my_strdup.c				\
 			src/utils/my_revstr.c				\
+			src/utils/len_tab.c				\
 			src/utils/my_str_to_wordtab.c			\
+			src/utils/my_getnbr.c				\
+			src/utils/aff_tab.c				\
 
-CMP		=	src/cmp/my_strcmp.c				\
-			src/cmp/my_strncmp.c				\
+HOME		=	src/get_next_line.c				\
 
-HOME		=	get_next_line.c					\
-
-SRCS_L		=	$(COPY)						\
-			$(CAT)						\
-			$(PARSE_STR)					\
-			$(POTHER)					\
+SRCS_L		=	$(CMP)						\
+			$(CONCAT)					\
+			$(COPY)						\
+			$(OTHER)					\
 			$(PRINT)					\
 			$(UTILS)					\
-			$(CMP)						\
+			$(HOME)						\
 
 SRCS_T		=	main.c						\
 			$(SRCS_L)					\

@@ -1,0 +1,31 @@
+/*
+** my_getnbr_base.c for my_getnbr_base.c in /home/proute_k/rendu/Piscine-C-lib/fnct
+**
+** Made by kévin prouteau
+** Login   <proute_k@epitech.net>
+**
+** Started on  Wed Mar 12 17:19:11 2014 kévin prouteau
+** Last update Wed Nov 12 11:58:36 2014 kevin
+*/
+
+#include	"my.h"
+
+char		*my_getnbr_base(char c, char *base)
+{
+  char		buff[5];
+  int		a;
+  int		i;
+  int		nb;
+  int		result;
+
+  a = 4;
+  nb = c;
+  i = my_strlen(base);
+  while ((nb /= i) != 0)
+    {
+      result = nb % i;
+      buff[a] = base[result];
+      a--;
+    }
+  return (my_strdup(buff));
+}

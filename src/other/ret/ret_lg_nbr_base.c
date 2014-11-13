@@ -1,3 +1,13 @@
+/*
+** ret_lg_nbr_base.c for libmy in /home/kevin/Documents/prog/C/libmy
+**
+** Made by kevin
+** Login   <kevin@epitech.net>
+**
+** Started on  Wed Nov 12 11:27:00 2014 kevin
+** Last update Wed Nov 12 11:27:00 2014 kevin
+*/
+
 #include	"my.h"
 
 char 		*ret_lg_nbr_base(void *var, char *base, char *ag)
