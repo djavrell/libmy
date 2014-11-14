@@ -5,7 +5,7 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Mon Feb  3 10:06:56 2014 kévin prouteau
-** Last update Sat Mar 29 20:23:09 2014 kévin prouteau
+** Last update Fri Nov 14 16:22:47 2014 kevin
 */
 
 #include	<stdlib.h>
@@ -16,9 +16,9 @@ int		nb_word(char *str, char op)
   int		i;
   int		j;
 
-  i = 0;
+  i = -1;
   j = 1;
-  while (str[i++] != '\0')
+  while (str[++i] != '\0')
     (str[i] == op) ? j++ : 0;
   return (j);
 }
@@ -47,7 +47,7 @@ char		**my_str_to_wordtab(char *str, char op)
   if ((t = malloc(((w = nb_word(str, op)) + 1) * sizeof(*t))) == NULL)
     return (NULL);
   w = 0;
-  while (i < my_strlen(str))
+  while (i - 1 < my_strlen(str))
     {
       j = -1;
       if ((t[w] = malloc((s = s_word(str, i, op)) * sizeof(**t))) == NULL)

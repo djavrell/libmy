@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 14:42:36 2014 kevin
-** Last update Wed Nov 12 15:00:08 2014 kevin
+** Last update Fri Nov 14 14:42:28 2014 kevin
 */
 
 #include	"my.h"
@@ -13,8 +13,16 @@
 void		aff_tab(char **tab)
 {
   int		i;
+  int		n;
 
   i = 0;
+  n = len_tab(tab);
+  printf("[");
   while (tab[i] != NULL)
-    my_printf(".%s.\n", tab[i++]);
+    {
+      printf("'%s'", tab[i++]);
+      if (i < n)
+      	printf(", ");
+    }
+  printf("]\n");
 }

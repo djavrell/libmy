@@ -5,16 +5,16 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:31 2014 kevin
-** Last update Wed Nov 12 16:20:20 2014 kevin
+** Last update Fri Nov 14 15:29:35 2014 kevin
 */
 
 #include	"my.h"
 
 char 		*ret_str(void *var, char *base, char *ag)
 {
-  char		*arg;
   char		*str;
-  int		ret;
+  char		*ret;
+  char		*arg;
   int		beg;
   int		end;
 
@@ -22,13 +22,20 @@ char 		*ret_str(void *var, char *base, char *ag)
   (char*)var;
   beg = 0;
   end = 0;
-  if (var == NULL)
-    return ("(null)");
   arg = NULL;
   str = NULL;
+  ret = NULL;
+  if (var == NULL)
+    return ("(null)");
   in_crochet(ag, &arg);
   if (arg != NULL)
     ret = set_born(arg, &beg, &end);
+  else
+    end = my_strlen(var);
+  end = (end == -1 ? my_strlen(var) : end);
   str = my_ev_strlcat(str, var, beg, end);
+  /* if (ret != NULL) */
+  /*   analyse_ret(&str, ret); */
+  /* printf("ret_str: str = %s\n", str); */
   return (str);
 }

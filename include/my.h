@@ -13,6 +13,8 @@
 # define	SUCCESS	0
 
 /* ===== { Macro } ===== */
+# define	IS_CHAR(c)	(c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+# define	IS_DIG(c)	(c >= '0' && c <= '9')
 
 /* ===== { Typedef } ===== */
 
@@ -30,6 +32,20 @@ typedef struct	s_list
   char		let;
   struct s_list	*next;
 }		t_list;
+
+typedef struct	s_str
+{
+  char		*arg;
+  char		*str;
+  int		beg;
+  int		end;
+}		t_str;
+
+typedef struct	s_opt_s
+{
+  char		*str;
+  char  *(*func)(char *str);
+}		t_opt_s;
 
 /* ===== { prototipe } ===== */
 /* home */
@@ -80,7 +96,12 @@ char 		*ret_str(void *var, char *base, char *ag);
 int	    	check_len(char *s, int b, int e);
 
 /* other/str */
-int		set_born(char *arg, int *beg, int *end);
+char		*set_born(char *arg, int *beg, int *end);
+char		*size_1(char **tab, int *beg, int *end);
+char		*size_2(char **tab, int *beg, int *end);
+char		*size_3(char **tab, int *beg, int *end);
+char		*analyse_ret(char **str, char *ret);
+t_opt_s		*tab_opt_s(void);
 
 /* print */
 int		my_fprintf(int fd, char *str, ...);
@@ -93,6 +114,7 @@ char		*my_revstr(char *str);
 int		my_strlen(char *str);
 int             my_getnbr(char *str);
 int		len_tab(char **tab);
+int		is_num(char *str);
 void		aff_tab(char **tab);
 
 #endif 		/* !_MY_H_ */

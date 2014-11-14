@@ -5,7 +5,7 @@
 ## Login   <kevin@epitech.net>
 ##
 ## Started on  Wed Nov 12 15:45:08 2014 kevin
-## Last update Wed Nov 12 15:45:15 2014 kevin
+## Last update Fri Nov 14 15:05:35 2014 kevin
 ##
 
 NAME_T		=	test
@@ -40,7 +40,7 @@ CHECK_BASE	=	src/other/check_base/check_ag_base.c		\
 			src/other/check_base/aff_list.c	 		\
 			src/other/check_base/free_list.c	 	\
 
-PARSE_STR	=	src/other/parse_str/my_ext.c			\
+PARSE_STR	=	src/other/parse_str/tab_ext.c			\
 			src/other/parse_str/parse_arg.c			\
 			src/other/parse_str/parse_str.c			\
 			src/other/parse_str/rec_arg.c			\
@@ -55,6 +55,10 @@ RET		=	src/other/ret/ret_str.c				\
 			src/other/ret/check_len.c			\
 
 STR		=	src/other/str/set_born.c			\
+			src/other/str/analyse_ret.c			\
+			src/other/str/tab_opt_s.c			\
+			src/other/str/size_1.c				\
+			src/other/str/size_2.c				\
 
 OTHER		=	$(CHECK_BASE)					\
 			$(PARSE_STR)					\
@@ -71,6 +75,7 @@ UTILS		=	src/utils/my_strlen.c				\
 			src/utils/my_str_to_wordtab.c			\
 			src/utils/my_getnbr.c				\
 			src/utils/aff_tab.c				\
+			src/utils/is_num.c				\
 
 HOME		=	src/get_next_line.c				\
 
