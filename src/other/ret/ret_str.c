@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:31 2014 kevin
-** Last update Mon Nov 17 10:37:52 2014 kevin
+** Last update Mon Nov 17 10:45:25 2014 kevin
 */
 
 #include	"my.h"
@@ -17,7 +17,6 @@ char 		*ret_str(void *var, char *base, char *ag)
   char		*arg;
   int		beg;
   int		end;
-  static int i = 0;
 
   (void)base;
   (char*)var;

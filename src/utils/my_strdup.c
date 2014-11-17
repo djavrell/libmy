@@ -1,14 +1,14 @@
 /*
 ** my_strdup.c for my_strdup.c in /home/proute_k/rendu/Piscine-C-Jour_08
-** 
+**
 ** Made by kévin prouteau
 ** Login   <proute_k@epitech.net>
-** 
+**
 ** Started on  Wed Oct  9 16:00:23 2013 kévin prouteau
-** Last update Tue Mar 25 10:32:32 2014 kévin prouteau
+** Last update Mon Nov 17 10:50:08 2014 kevin
 */
 
-#include	"../include/my.h"
+#include	"my.h"
 
 char		*my_strdup(char *src)
 {

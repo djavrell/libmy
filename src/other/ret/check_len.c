@@ -5,16 +5,16 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:26:21 2014 kevin
-** Last update Wed Nov 12 16:15:36 2014 kevin
+** Last update Mon Nov 17 10:55:12 2014 kevin
 */
 
 #include 	"my.h"
 /**
- * @param  s str
- * @param  b beg => the start's char to count
- * @param  e end => the end's char
- * @return   int => number of octet fot the malloc
- */
+ ** @param  s str
+ ** @param  b beg => the start's char to count
+ ** @param  e end => the end's char
+ ** @return   int => number of octet fot the malloc
+ **/
 
 int		check_len(char *s, int b, int e)
 {

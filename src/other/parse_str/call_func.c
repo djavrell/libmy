@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:29:06 2014 kevin
-** Last update Wed Nov 12 11:29:14 2014 kevin
+** Last update Mon Nov 17 11:53:04 2014 kevin
 */
 
 #include	"my.h"
@@ -16,6 +16,7 @@ char		*call_func(char **ag, va_list ap)
   char      	*ret;
   char 		*param;
   int       	i;
+  static int n = 1;
 
   ret = NULL;
   i = 0;

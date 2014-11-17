@@ -5,10 +5,9 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Mon Feb  3 10:06:56 2014 kévin prouteau
-** Last update Fri Nov 14 16:22:47 2014 kevin
+** Last update Mon Nov 17 10:50:54 2014 kevin
 */
 
-#include	<stdlib.h>
 #include	"my.h"
 
 int		nb_word(char *str, char op)

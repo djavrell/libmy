@@ -5,14 +5,12 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Tue Oct  8 10:32:05 2013 kévin prouteau
-** Last update Mon Nov 17 10:35:43 2014 kevin
+** Last update Mon Nov 17 10:51:32 2014 kevin
 */
 
-#include	"my.h"
-
-char		*my_strupcase(char *str)
+char	*my_strupcase(char *str)
 {
-  int		i;
+  int	i;
 
   i = -1;
   while (str[++i] != '\0')

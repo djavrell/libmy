@@ -5,10 +5,10 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Thu Jun 12 15:48:34 2014 kévin prouteau
-** Last update Thu Jun 12 15:48:35 2014 kévin prouteau
+** Last update Mon Nov 17 10:46:44 2014 kevin
 */
 
-#include	"../include/my.h"
+#include	"my.h"
 
 char		*my_ev_strncat(char *dest, char *src, int size)
 {

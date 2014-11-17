@@ -5,10 +5,10 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Wed Oct  9 15:41:12 2013 kévin prouteau
-** Last update Wed Nov 12 11:57:50 2014 kevin
+** Last update Mon Nov 17 10:59:38 2014 kevin
 */
 
-#include	"my.h"
+#include	<stdlib.h>
 
 int		my_getnbr(char *str)
 {

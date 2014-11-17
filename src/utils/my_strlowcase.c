@@ -5,14 +5,12 @@
 ** Login   <proute_k@epitech.net>
 **
 ** Started on  Tue Oct  8 10:52:42 2013 kévin prouteau
-** Last update Mon Nov 17 10:34:13 2014 kevin
+** Last update Mon Nov 17 10:50:45 2014 kevin
 */
 
-#include	"my.h"
-
-char		*my_strlowcase(char *str)
+char	*my_strlowcase(char *str)
 {
-  int		i;
+  int	i;
 
   i = -1;
   while (str[++i] != '\0')
