@@ -5,8 +5,15 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:22:49 2014 kevin
-** Last update Mon Nov 17 12:00:13 2014 kevin
+** Last update Mon Nov 17 12:13:39 2014 kevin
 */
+
+/**
+ * /!\
+ * ceci est un main de test, il n'est pas inclu dans la lib,
+ * ne pas le orendre en compte
+ * /!\
+ **/
 
 #include	"my.h"
 
@@ -18,8 +25,8 @@ int	    	main(void)
   unsigned int	i;
   char		s;
 
-  str1 = "0123456789";
-  /* str1 = "CECI est un test de chaine de charactere"; */
+  /* str1 = "0123456789"; */
+  str1 = "CECI est un test de chaine de charactere";
   nb = 12345;
   t = 12345;
   i = 012345;
