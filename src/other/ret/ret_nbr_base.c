@@ -5,14 +5,15 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:09 2014 kevin
-** Last update Thu Nov 13 10:39:40 2014 kevin
+** Last update Fri Nov 14 20:02:31 2014 kevin
 */
 
 #include	"my.h"
 
 char		*ret_nbr_base(void *var, char *base, char *ag)
 {
-  int		nb;
+  int		*nb;
+  int		n;
   char		*ret;
   char		*b;
   char 		end[2];
@@ -21,18 +22,19 @@ char		*ret_nbr_base(void *var, char *base, char *ag)
   if ((b = malloc(2 * sizeof(*b))) == NULL)
     return (NULL);
   b[1] = '\0';
-  nb = var;
+  nb = (int*)var;
+  n = *nb;
   ret = NULL;
-  end[0] = ((nb < 0) ? '-' : 0);
+  end[0] = ((n < 0) ? '-' : 0);
   end[1] = '\0';
-  nb *= ((nb < 0) ? -1 : 1);
+  n *= ((n < 0) ? -1 : 1);
   basef = base;
   check_ag_base(ag, &basef);
   while (nb > 0)
     {
-      b[0] = basef[nb % my_strlen(basef)];
+      b[0] = basef[n % my_strlen(basef)];
       ret = my_ev_strcat(ret, b);
-      nb /= my_strlen(basef);
+      n /= my_strlen(basef);
     }
   free(b);
   /* free(basef); */

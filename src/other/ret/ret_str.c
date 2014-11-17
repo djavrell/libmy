@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:31 2014 kevin
-** Last update Fri Nov 14 15:29:35 2014 kevin
+** Last update Mon Nov 17 10:37:52 2014 kevin
 */
 
 #include	"my.h"
@@ -17,6 +17,7 @@ char 		*ret_str(void *var, char *base, char *ag)
   char		*arg;
   int		beg;
   int		end;
+  static int i = 0;
 
   (void)base;
   (char*)var;
@@ -32,10 +33,9 @@ char 		*ret_str(void *var, char *base, char *ag)
     ret = set_born(arg, &beg, &end);
   else
     end = my_strlen(var);
-  end = (end == -1 ? my_strlen(var) : end);
+  end = ((end == -1 || end == 0) ? my_strlen(var) : end);
   str = my_ev_strlcat(str, var, beg, end);
-  /* if (ret != NULL) */
-  /*   analyse_ret(&str, ret); */
-  /* printf("ret_str: str = %s\n", str); */
+  if (ret != NULL)
+    analyse_ret(&str, ret);
   return (str);
 }

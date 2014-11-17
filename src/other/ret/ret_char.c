@@ -5,16 +5,17 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:26:49 2014 kevin
-** Last update Wed Nov 12 11:26:50 2014 kevin
+** Last update Fri Nov 14 19:49:06 2014 kevin
 */
 
 #include	"my.h"
 
 char 		*ret_char(void *var, char *base, char *ag)
 {
+  char		*r;
   char 		ret;
 
   (void)base;
-  ret = var;
-  return (&ret);
+  r = (char*)var;
+  return (r);
 }

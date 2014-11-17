@@ -5,22 +5,24 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:43 2014 kevin
-** Last update Wed Nov 12 11:27:44 2014 kevin
+** Last update Fri Nov 14 19:47:56 2014 kevin
 */
 
 #include	"my.h"
 
 char 		*ret_us_nbr_base(void *var, char *base, char *ag)
 {
-  unsigned int	nb;
+  unsigned int	*n;
   char		*ret;
   char		*b;
   char		*basef;
+  unsigned int	nb;
 
   if ((b = malloc(2 * sizeof(*b))) == NULL)
     return (NULL);
   b[1] = '\0';
-  nb = var;
+  n = (unsigned int*)var;
+  nb = *n;
   ret = NULL;
   basef = base;
   check_ag_base(ag, &basef);

@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Thu Nov 13 15:44:02 2014 kevin
-** Last update Thu Nov 13 16:03:23 2014 kevin
+** Last update Mon Nov 17 10:40:53 2014 kevin
 */
 
 #include	"my.h"
@@ -14,10 +14,9 @@ t_opt_s		*tab_opt_s(void)
 {
   static t_opt_s tab[] =
     {
-      {"upcase", NULL},
-      {"lowcase", NULL},
-      {"-1", NULL},
-      {"trunc", NULL},
+      {"upcase", &my_strupcase},
+      {"lowcase", &my_strlowcase},
+      {"-1", &my_revstr},
       {NULL, NULL}
     };
   return (tab);

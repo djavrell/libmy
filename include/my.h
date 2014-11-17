@@ -109,6 +109,8 @@ int		my_printf(char *str, ...);
 
 /* utils */
 char            **my_str_to_wordtab(char *str, char op);
+char		*my_strlowcase(char *str);
+char		*my_strupcase(char *str);
 char		*my_strdup(char *src);
 char		*my_revstr(char *str);
 int		my_strlen(char *str);

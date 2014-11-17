@@ -5,7 +5,7 @@
 ## Login   <kevin@epitech.net>
 ##
 ## Started on  Wed Nov 12 15:45:08 2014 kevin
-## Last update Fri Nov 14 15:05:35 2014 kevin
+## Last update Mon Nov 17 10:37:06 2014 kevin
 ##
 
 NAME_T		=	test
@@ -59,6 +59,7 @@ STR		=	src/other/str/set_born.c			\
 			src/other/str/tab_opt_s.c			\
 			src/other/str/size_1.c				\
 			src/other/str/size_2.c				\
+			src/other/str/size_3.c				\
 
 OTHER		=	$(CHECK_BASE)					\
 			$(PARSE_STR)					\
@@ -76,6 +77,8 @@ UTILS		=	src/utils/my_strlen.c				\
 			src/utils/my_getnbr.c				\
 			src/utils/aff_tab.c				\
 			src/utils/is_num.c				\
+			src/utils/my_strlowcase.c			\
+			src/utils/my_strupcase.c			\
 
 HOME		=	src/get_next_line.c				\
 

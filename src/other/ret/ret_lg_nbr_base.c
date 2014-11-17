@@ -5,22 +5,24 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:27:00 2014 kevin
-** Last update Wed Nov 12 11:27:00 2014 kevin
+** Last update Fri Nov 14 19:47:05 2014 kevin
 */
 
 #include	"my.h"
 
 char 		*ret_lg_nbr_base(void *var, char *base, char *ag)
 {
-  long		nb;
+  long		*n;
   char		*ret;
   char		*b;
   char		*basef;
+  long		nb;
 
   if ((b = malloc(2 * sizeof(*b))) == NULL)
     return (NULL);
   b[1] = '\0';
-  nb = var;
+  n = (long*)var;
+  nb = *n;
   ret = NULL;
   basef = base;
   check_ag_base(ag, &basef);
