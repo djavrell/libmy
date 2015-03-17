@@ -22,7 +22,7 @@ void		*in_crochet(char *ag, char **arg)
   if (ag[i] != '[')
     return (NULL);
   i++;
-  while (ag[i + n] != ']' && ag[i] != '\0')
+  while (ag[i + n] != ']' && ag[i + n] != '\0')
     n++;
   if ((*arg = malloc(n * sizeof(*arg))) == NULL)
     return (NULL);
