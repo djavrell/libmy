@@ -5,7 +5,7 @@
 ** Login   <kevin@epitech.net>
 **
 ** Started on  Wed Nov 12 11:26:49 2014 kevin
-** Last update Mon Nov 17 11:52:28 2014 kevin
+** Last update Fri Jun 19 15:26:31 2015 kevin
 */
 
 #include	"my.h"
@@ -22,13 +22,3 @@ char		*ret_char(void *var, char *base, char *ag)
   ret[1] = '\0';
   return (ret);
 }
-
-/* char 		*ret_char(void *var, char *base, char *ag) */
-/* { */
-/*   char		*r; */
-/*   char 		ret; */
-
-/*   (void)base; */
-/*   r = (char*)var; */
-/*   return (r); */
-/* } */

@@ -5,7 +5,7 @@
 ## Login   <kevin@epitech.net>
 ##
 ## Started on  Wed Nov 12 15:45:08 2014 kevin
-## Last update Mon Nov 17 10:37:06 2014 kevin
+## Last update Fri Jun 19 15:21:14 2015 kevin
 ##
 
 NAME_T		=	test
@@ -97,6 +97,7 @@ OBJS_T		=	$(SRCS_T:.c=.o)
 OBJS_L		=	$(SRCS_L:.c=.o)
 
 INC		=	-I include/
+LIB		=	-L ./include -lmy
 
 CFLAGS		=	$(INC)
 
@@ -107,10 +108,6 @@ test		:	$(OBJS_T)
 
 lib		:	$(OBJS_L)
 			$(LIB) $(NAME_L) $(OBJS_L)
-
-tmp		:
-			find './' -name '*~' -exec rm '{}' ;
-			find './' -name '*#' -exec rm '{}' ;
 
 clean		:
 			$(RM) $(OBJS_T)

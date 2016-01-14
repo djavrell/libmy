@@ -1,0 +1,10 @@
+language: c
+sudo: false
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+
+script:
+    - make -j4
