@@ -1,7 +1,7 @@
 language: c
 sudo: false
 
-befor_script:
+before_script:
     - gcc --version
     - echo $LC_ALL
 
