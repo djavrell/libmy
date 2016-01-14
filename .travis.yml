@@ -1,12 +1,18 @@
 language: c
 sudo: false
 
+befor_script:
+    - gcc --version
+    - echo $LC_ALL
+
 matrix:
   include:
     - os: linux
       compiler:
         - gcc
-        - clang
 
 script:
     - make -j4
+
+notification:
+  email: false
