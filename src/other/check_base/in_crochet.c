@@ -19,7 +19,7 @@ void		*in_crochet(char *ag, char **arg)
   n = 0;
   while (ag[i] != '[' && ag[i] != '\0')
     i++;
-  if (ag[i] != '[')
+  if (ag[i] != '[' || ag[i] == '\0')
     return (NULL);
   i++;
   while (ag[i + n] != ']' && ag[i + n] != '\0')
