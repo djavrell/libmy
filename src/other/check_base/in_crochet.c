@@ -19,11 +19,13 @@ void		*in_crochet(char *ag, char **arg)
   n = 0;
   while (ag[i] != '[' && ag[i] != '\0')
     i++;
-  if (ag[i] != '[')
+  if (ag[i] != '[' || ag[i] == '\0')
     return (NULL);
   i++;
   while (ag[i + n] != ']' && ag[i + n] != '\0')
     n++;
+  if (ag[i + n] != ']' || ag[i + n] == '\0')
+    return (NULL);
   if ((*arg = malloc(n * sizeof(*arg))) == NULL)
     return (NULL);
   *arg = my_strlcpy(*arg, ag, i, n);
