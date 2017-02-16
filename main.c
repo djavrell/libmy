@@ -11,7 +11,7 @@
 /**
  * /!\
  * ceci est un main de test, il n'est pas inclu dans la lib,
- * ne pas le orendre en compte
+ * ne pas le prendre en compte
  * /!\
  **/
 
